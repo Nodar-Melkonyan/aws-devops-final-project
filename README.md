@@ -30,3 +30,27 @@ python app.py
 - Use Amazon RDS for the database.
 - Deploy using ECS or EKS.
 - Inject environment variables using task definitions or Kubernetes secrets.
+
+# Simple Python AWS DevOps Application
+
+ეს აპლიკაცია ემსახურება ორ ძირითად მიზანს:
+1. შეამოწმოს ბოლო წერტილების სტატუსი (`/`). ამისთვის ის მარტივ მისალმებს აბრუნებს;
+2. მონაცემთა ბაზის კავშირი შეამოწმოს (`/db`). ამოწმებს კავშირს Amazon RDS MySQL-ის მონაცემთა ბაზასთან და მოთხოვნის შედეგებს აბრუნებს.
+
+მონაცემთა ბაზის კავშირისთვის აპლიკაცია იყენებს Flask-სა და PyMySQL-ს. კონფიგურაცია ხერხდება გარემოს ცვლადების მეშვეობით.
+
+პროცესში გამოყენებული იქნება:
+Amazon ECS კონტეინერის კოორდინაციისთვის;
+Amazon RDS MySql ბაზისთვის;
+Amazon ECR კონტაინერის სურათების სამართავად;
+GitHub ქმედებები CI/CD-ის ავტომატიზაციისთვის;
+ALB საჯარო წვდომისთვის.
+
+
+## Repository Structure
+
+aws-devops-final-project/
+├── app.py # Main Flask application
+├── requirements.txt # Python dependencies
+├── README.md # This documentation file
+└── .env.example # Environment variables template
