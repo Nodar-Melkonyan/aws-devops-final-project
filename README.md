@@ -50,7 +50,14 @@ ALB საჯარო წვდომისთვის.
 ## Repository Structure
 
 aws-devops-final-project/
-├── app.py # Main Flask application
-├── requirements.txt # Python dependencies
-├── README.md # This documentation file
-└── .env.example # Environment variables template
+├── .github/
+│   └── workflows/
+│       └── deploy-to-aws.yml
+├── .aws/
+│   └── task-definition.json
+├── app.py
+├── Dockerfile
+├── requirements.txt
+├── README.md
+├── .env.example
+└── .dockerignore
